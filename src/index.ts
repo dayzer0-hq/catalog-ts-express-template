@@ -3,8 +3,8 @@ import express from "express";
 const app = express();
 app.use(express.json());
 
-// Health check — the one route the starter ships with. Build your feature routes alongside it.
-app.get("/health", (_req, res) => {
+// Liveness check — the one route the starter ships with. Build your feature routes alongside it.
+app.get("/healthz", (_req, res) => {
   res.status(200).json({ status: "ok" });
 });
 
